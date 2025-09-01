@@ -37,8 +37,8 @@ Item {
         return `${mins}:${secs}`;
     }
 
-    implicitWidth: cover.implicitWidth + Config.dashboard.sizes.mediaVisualiserSize * 2 + details.implicitWidth + details.anchors.leftMargin + bongocat.implicitWidth + bongocat.anchors.leftMargin * 2 + Appearance.padding.large * 2
-    implicitHeight: Math.max(cover.implicitHeight + Config.dashboard.sizes.mediaVisualiserSize * 2, details.implicitHeight, bongocat.implicitHeight) + Appearance.padding.large * 2
+    implicitWidth: cover.implicitWidth + Config.dashboard.sizes.mediaVisualiserSize * 2 + details.implicitWidth + details.anchors.leftMargin * 2 + Appearance.padding.large * 2
+    implicitHeight: Math.max(cover.implicitHeight + Config.dashboard.sizes.mediaVisualiserSize * 2, details.implicitHeight) + Appearance.padding.large * 2
 
     Behavior on playerProgress {
         Anim {
@@ -505,30 +505,6 @@ Item {
                     Players.active?.quit();
                 }
             }
-        }
-    }
-
-    Item {
-        id: bongocat
-
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.left: details.right
-        anchors.leftMargin: Appearance.spacing.normal
-
-        implicitWidth: visualiser.width
-        implicitHeight: visualiser.height
-
-        AnimatedImage {
-            anchors.centerIn: parent
-
-            width: visualiser.width * 0.75
-            height: visualiser.height * 0.75
-
-            playing: Players.active?.isPlaying ?? false
-            speed: BeatDetector.bpm / 300
-            source: Paths.expandTilde(Config.paths.mediaGif)
-            asynchronous: true
-            fillMode: AnimatedImage.PreserveAspectFit
         }
     }
 

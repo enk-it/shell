@@ -411,7 +411,6 @@ The module automatically adds Caelestia shell to the path with **full functional
     },
     "paths": {
         "mediaGif": "root:/assets/bongocat.gif",
-        "sessionGif": "root:/assets/kurukuru.gif",
         "wallpaperDir": "~/Pictures/Wallpapers"
     },
     "services": {

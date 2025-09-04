@@ -1,7 +1,9 @@
 import qs.components
+import qs.components.misc
 import qs.services
 import qs.config
 import qs.utils
+import Caelestia
 import QtQuick
 import QtQuick.Shapes
 
@@ -29,6 +31,10 @@ Item {
         triggeredOnStart: true
         repeat: true
         onTriggered: Players.active?.positionChanged()
+    }
+
+    Ref {
+        service: BeatTracker
     }
 
     Shape {

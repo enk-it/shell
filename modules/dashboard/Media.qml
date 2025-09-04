@@ -7,6 +7,7 @@ import qs.components.controls
 import qs.services
 import qs.utils
 import qs.config
+import Caelestia
 import Quickshell
 import Quickshell.Widgets
 import Quickshell.Services.Mpris
@@ -56,6 +57,10 @@ Item {
 
     Ref {
         service: Cava
+    }
+
+    Ref {
+        service: BeatTracker
     }
 
     Shape {

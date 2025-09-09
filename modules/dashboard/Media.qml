@@ -2,7 +2,6 @@ pragma ComponentBehavior: Bound
 
 import qs.components
 import qs.components.effects
-import qs.components.misc
 import qs.components.controls
 import qs.services
 import qs.utils
@@ -56,11 +55,11 @@ Item {
     }
 
     ServiceRef {
-        service: Cava.provider
+        service: Audio.cava
     }
 
     ServiceRef {
-        service: BeatTracker
+        service: Audio.beatTracker
     }
 
     Shape {
@@ -91,7 +90,7 @@ Item {
             id: visualiserBar
 
             required property int modelData
-            readonly property real value: Math.max(1e-3, Math.min(1, Cava.values[modelData]))
+            readonly property real value: Math.max(1e-3, Math.min(1, Audio.cava.values[modelData]))
 
             readonly property real angle: modelData * 2 * Math.PI / Config.services.visualiserBars
             readonly property real magnitude: value * Config.dashboard.sizes.mediaVisualiserSize

@@ -1,5 +1,4 @@
 import qs.components
-import qs.components.misc
 import qs.services
 import qs.config
 import qs.utils
@@ -34,7 +33,7 @@ Item {
     }
 
     ServiceRef {
-        service: BeatTracker
+        service: Audio.beatTracker
     }
 
     Shape {

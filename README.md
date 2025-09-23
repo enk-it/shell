@@ -566,7 +566,11 @@ default, you must create it manually.
     },
     "utilities": {
         "enabled": true,
-        "maxToasts": 4
+        "maxToasts": 4,
+        "toasts": {
+            "audioOutputChanged": true,
+            "audioInputChanged": true
+        }
     }
 }
 ```
